@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<meta charset="utf-8">
+		<title>ANIMAÇÃO COM JS</title>
+		<style type="text/css">
+			body{
+		background-color: #265559;
+		color: #99A3A4;
+		font: normal 16pt arial;
+		}
+		header{
+		text-align: center;
+		}
+
+		button{
+			background-color: #B71C1C;
+			border-width: 0px;
+			color: antiquewhite;
+			font: normal 24pt arial;
+			border-radius: 4px;
+		}
+		section{
+		background-color: #282828;
+		color: black;
+		border-radius: 10px;
+		width: 530px;
+		padding: 10px;
+		margin: auto;
+		box-shadow: 4px 4px 4px #383737;
+		text-align: center;
+		}
+		footer{
+		padding: 10px;
+		text-align: center;
+		}
+
+		#box{
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			border-radius: 10px;
+			background-color: #363636;
+			position: relative;
+			/*animation: mover 1s infinite;*/
+			/*text-align: center;*/
+			
+		}
+
+		@keyframes mover{
+			0%{left:  0px;}
+			25%{left:  400px;}
+			50%{left:  200px;}
+			75%{left: 0px;}
+		}
+
+		p{
+			color: white;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>ANIMAÇÃO COM CSS</h1>
+		</header>
+		<section>
+			<div>
+				<button onclick="mover()">Click</button>
+			</div>
+			<div id="box"></div>
+		</section>
+	<footer>
+		<p>&copy; jesiel.py</p>
+	</footer>
+
+	<script type="text/javascript">
+		function mover(){
+			var box = document.getElementById('box')
+			box.style.animation = 'mover 4s infinite'
+			box.innerHTML = "<span style='font-size:60px;'>&#128518;</span>"
+			var bt = document.getElementsByTagName('button')
+			bt.innerHTML = '<button onclick="mover()">Click</button>'
+
+		}
+	</script>
+</body>
+</html>
